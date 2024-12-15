@@ -48,7 +48,7 @@ pipeline {
                         echo 'Building C application...'
                         // Команда для компиляции приложения на C
                         sh 'apt-get update'
-                        sh 'sudo apt-get install -y gcc'
+                        sh 'apt-get install -y gcc'
                         sh 'gcc app/main.c -o app/main'
                     } else {
                         echo 'C source file not found in /app/main.c'
