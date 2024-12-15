@@ -47,6 +47,7 @@ pipeline {
                     if (fileExists('app/main.c')) {
                         echo 'Building C application...'
                         // Команда для компиляции приложения на C
+                        sh 'apt-get install -y gcc'
                         sh 'gcc app/main.c -o app/main'
                     } else {
                         echo 'C source file not found in /app/main.c'
